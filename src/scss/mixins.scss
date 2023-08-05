@@ -1,0 +1,26 @@
+@import 'base';
+
+@mixin adaptiveValue($value, $min-width, $max-width, $min-gap, $max-gap) {
+    @media (min-width: $min-width) {
+        // #{$value}: calc(100vw * $max-gap / $max-width);
+        #{$value}: calc($max-gap - (($max-width - 100vw) * (($max-gap - $min-gap) / ($max-width - $min-width))));
+    }
+    @media (min-width: $max-width) {
+        #{$value}: $max-gap;
+    }
+    @media (max-width: $min-width) {
+        #{$value}: $min-gap;
+    }
+}
+
+@mixin adaptiveSize($value, $min-value, $max-value) {
+    @media (max-width: $maxWidth) {
+        #{$value}: calc($max-value - (($maxWidth - 100vw) * ($max-value - $min-value) / ($maxWidth - $minWidth)));
+    }
+    // @media (min-width: $maxWidth) {
+    //     #{$value}: $max-value;
+    // }
+    // @media (max-width: $minWidth) {
+    //     #{$value}: $min-value;
+    // }
+}

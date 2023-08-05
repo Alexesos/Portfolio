@@ -1,0 +1,89 @@
+@import 'base';
+@import 'mixins';
+
+// MAIN -----------------------------------------------------
+
+.main {
+
+    // .main__welcome
+
+    &__welcome {
+    }
+
+    &__services {
+    }
+
+    &__projects {
+    }
+
+    &__education {
+    }
+
+    &__contacts {
+    }
+}
+
+// BLOCK1 -----------------------------------------------------
+
+.title {
+    // .title__label
+
+    &__label {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: pxToRem(12); /* 12/16 */
+        line-height: 2; /* 24/12 */
+        letter-spacing: pxToEm(7.5, 12);
+        color: $subColor;
+
+        display: flex;
+        align-items: center;
+        gap: pxToRem(16);
+
+        &::before {
+            content: '';
+            width: pxToRem(16);
+            height: pxToRem(2);
+            background: #d9d9d9; 
+        }
+
+        &:not(:last-child) {
+            margin: 0 0 pxToEm(9, 12) 0;
+        }
+    }
+
+    // .title__value
+
+    &__value {
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 700;
+        line-height: 1.25; /* 45/36 */
+        @include adaptiveValue(font-size, 320px, 1400px, 28px, 36px);
+
+        span {
+            background: #707070;
+            color: #fff;
+            padding: 0 pxToRem(5);
+            border-radius: pxToRem(5);
+
+            position: relative;
+        }
+
+        &_big {
+            @include adaptiveValue(font-size, 320px, 1400px, 30px, 44px);
+            line-height: 1.25; /* 55/44 */
+        }
+
+        &_span {
+            
+        }
+    } 
+}
+
+.text {
+    line-height: 2; /* 32/16 */
+
+    &:not(:last-child) {
+        margin: 0 0 pxToRem(32) 0;
+    }
+}

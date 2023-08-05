@@ -1,0 +1,54 @@
+@import 'base';
+@import 'mixins';
+
+.footer {
+    // .footer__container
+
+    &__container {
+        @include adaptiveValue(min-height, 320px, 1200px, 141px, 241px);
+        display: grid;
+        gap: pxToRem(24);
+        justify-content: center;
+    }
+
+    // .footer__social
+
+    &__social {
+        align-self: end;
+        display: flex;
+        justify-content: center;
+        gap: pxToRem(32);
+        font-size: pxToRem(24);
+
+        a {
+            transition: .3s ease;
+
+            &:hover {
+                color: $purpleColor;
+            }
+        }
+    }
+
+    // .footer__copy
+
+    &__copy {
+        align-self: start;
+        text-align: center;
+
+        font-size: pxToRem(14);
+        font-weight: 400;
+    }
+}
+.social {
+
+    // .social__item
+
+    &__item {
+        
+    }
+
+    // .social__link
+
+    &__link {
+    }
+}

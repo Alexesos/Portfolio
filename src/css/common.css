@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:500,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:500,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+.title__label {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.75rem; /* 12/16 */
+  line-height: 2; /* 24/12 */
+  letter-spacing: 0.625em;
+  color: #656d72;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.title__label::before {
+  content: "";
+  width: 1rem;
+  height: 0.125rem;
+  background: #d9d9d9;
+}
+.title__label:not(:last-child) {
+  margin: 0 0 0.75em 0;
+}
+.title__value {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  line-height: 1.25; /* 45/36 */
+}
+@media (min-width: 320px) {
+  .title__value {
+    font-size: calc(36px - (1400px - 100vw) * 0.0074074074);
+  }
+}
+@media (min-width: 1400px) {
+  .title__value {
+    font-size: 36px;
+  }
+}
+@media (max-width: 320px) {
+  .title__value {
+    font-size: 28px;
+  }
+}
+.title__value span {
+  color: #7374f1;
+}
+.title__value_big {
+  line-height: 1.25; /* 55/44 */
+}
+@media (min-width: 320px) {
+  .title__value_big {
+    font-size: calc(44px - (1400px - 100vw) * 0.012962963);
+  }
+}
+@media (min-width: 1400px) {
+  .title__value_big {
+    font-size: 44px;
+  }
+}
+@media (max-width: 320px) {
+  .title__value_big {
+    font-size: 30px;
+  }
+}
+
+.text {
+  line-height: 2; /* 32/16 */
+}
+.text:not(:last-child) {
+  margin: 0 0 2rem 0;
+}/*# sourceMappingURL=common.css.map */
